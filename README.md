@@ -16,6 +16,8 @@ It supports region capture, visible-area capture, and full-page capture, with a 
 - Configure full-page floating/sticky element handling
 - Optionally auto-download without switching to the preview tab
 
+**Compatibility Note:** The extension is fully supported on macOS. Windows compatibility may require additional configuration.
+
 ## Screenshots
 
 Example images under `docs/screenshots/`:
