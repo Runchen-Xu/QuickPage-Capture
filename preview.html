@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>截图预览</title>
+    <link rel="stylesheet" href="preview.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="summary-card">
+        <div>
+          <div class="summary-top">
+            <p class="eyebrow" id="preview-wordmark">PREVIEW</p>
+            <label class="language-switch">
+              <span id="language-label">语言</span>
+              <select id="language-select">
+                <option value="zh-CN">中文</option>
+                <option value="en">English</option>
+              </select>
+            </label>
+          </div>
+          <h1 id="title">正在准备截图…</h1>
+          <p id="description" class="description">请稍候，截图完成后会在这里显示。</p>
+        </div>
+        <div class="meta">
+          <span id="mode-badge" class="badge">等待任务</span>
+          <span id="progress-badge" class="badge secondary">0 / 0</span>
+        </div>
+      </section>
+
+      <section class="toolbar">
+        <div class="toolbar-actions">
+          <label class="format-switch">
+            <span id="export-format-label">导出格式</span>
+            <select id="export-format-select">
+              <option value="png">PNG</option>
+              <option value="jpeg">JPEG</option>
+              <option value="pdf">PDF</option>
+            </select>
+          </label>
+          <button id="download-button" class="download-button" type="button" disabled>下载 PNG</button>
+          <button id="copy-button" class="copy-button" type="button" disabled>复制到剪贴板</button>
+        </div>
+        <p id="source-info" class="source-info">等待任务信息…</p>
+      </section>
+
+      <section id="state-panel" class="state-panel">
+        <p id="state-message" class="state-message">正在连接后台服务…</p>
+      </section>
+
+      <section id="image-panel" class="image-panel hidden">
+        <img id="result-image" alt="截图预览" />
+      </section>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="preview.js"></script>
+  </body>
+</html>

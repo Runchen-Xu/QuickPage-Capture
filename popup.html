@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>QuickPage Capture</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="popup">
+      <header class="hero">
+        <div class="hero-top">
+          <p class="eyebrow">Chrome Extension</p>
+          <label class="language-switch">
+            <span id="language-label">语言</span>
+            <select id="language-select">
+              <option value="zh-CN">中文</option>
+              <option value="en">English</option>
+            </select>
+          </label>
+        </div>
+        <h1 id="popup-title">QuickPage Capture</h1>
+        <p class="subtitle" id="popup-subtitle">支持当前可视区域截图与整页截图，结果会自动打开到预览页。</p>
+      </header>
+
+      <section class="actions">
+        <button id="capture-region" class="action-button accent" type="button">区域截图</button>
+        <button id="capture-visible" class="action-button primary" type="button">截图可视区域</button>
+        <button id="capture-full" class="action-button secondary" type="button">截图整页</button>
+      </section>
+
+      <section class="utility-card">
+        <button id="open-settings" class="text-button" type="button">设置</button>
+      </section>
+
+      <section class="status-card" id="status-card" data-phase="idle">
+        <p class="status-label" id="status-label">状态</p>
+        <p class="status-message" id="status-message">准备就绪</p>
+        <p class="status-progress" id="status-progress">点击按钮开始截图</p>
+        <div id="preview-block" class="popup-preview hidden">
+          <p id="preview-label" class="preview-label">最近一次下载预览</p>
+          <img id="preview-image" class="preview-image" alt="最近一次下载预览" />
+        </div>
+      </section>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="settings.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>

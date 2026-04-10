@@ -1,0 +1,247 @@
+:root {
+  color-scheme: light;
+  --bg: #efe9dd;
+  --panel: rgba(255, 251, 245, 0.92);
+  --line: rgba(43, 35, 27, 0.12);
+  --text: #191510;
+  --muted: #726556;
+  --accent: #0f766e;
+  --accent-strong: #155e75;
+  --warning: #b45309;
+  --error: #b91c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "SF Pro Display", "PingFang SC", "Helvetica Neue", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top right, rgba(21, 94, 117, 0.14), transparent 28%),
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.18), transparent 32%),
+    linear-gradient(180deg, #faf5eb 0%, var(--bg) 100%);
+}
+
+.page {
+  width: min(1200px, calc(100vw - 32px));
+  margin: 0 auto;
+  padding: 32px 0 48px;
+  display: grid;
+  gap: 18px;
+}
+
+.summary-card,
+.toolbar,
+.state-panel,
+.image-panel {
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  background: var(--panel);
+  box-shadow: 0 18px 42px rgba(25, 21, 16, 0.08);
+}
+
+.summary-card {
+  padding: 24px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.summary-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--warning);
+}
+
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.language-switch select {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.75);
+  color: var(--text);
+  padding: 6px 10px;
+  font: inherit;
+}
+
+.summary-card h1 {
+  margin: 0 0 8px;
+  font-size: clamp(28px, 5vw, 42px);
+  line-height: 1;
+}
+
+.description {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 0 14px;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.12);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.badge.secondary {
+  background: rgba(21, 94, 117, 0.1);
+  color: var(--accent-strong);
+}
+
+.toolbar {
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.toolbar-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.download-button,
+.copy-button {
+  border: 0;
+  border-radius: 16px;
+  padding: 14px 20px;
+  min-width: 140px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-strong) 100%);
+  cursor: pointer;
+  transition:
+    opacity 0.18s ease,
+    transform 0.18s ease;
+}
+
+.download-button:hover:not(:disabled),
+.copy-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.download-button:disabled,
+.copy-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.copy-button {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.84);
+  border: 1px solid var(--line);
+}
+
+.format-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.format-switch select {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.84);
+  color: var(--text);
+  padding: 10px 14px;
+  font: inherit;
+}
+
+.source-info {
+  margin: 0;
+  font-size: 13px;
+  color: var(--muted);
+  word-break: break-all;
+  text-align: right;
+}
+
+.state-panel {
+  padding: 18px 24px;
+}
+
+.state-message {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.state-panel.error {
+  border-color: rgba(185, 28, 28, 0.35);
+}
+
+.image-panel {
+  padding: 22px;
+  overflow: auto;
+}
+
+.image-panel.hidden {
+  display: none;
+}
+
+#result-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+@media (max-width: 720px) {
+  .page {
+    width: min(100vw - 20px, 1200px);
+    padding-top: 20px;
+  }
+
+  .summary-card,
+  .toolbar {
+    padding: 18px;
+  }
+
+  .summary-card,
+  .toolbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .source-info {
+    text-align: left;
+  }
+}

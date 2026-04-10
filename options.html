@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>设置</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="page">
+      <header class="hero">
+        <div class="hero-top">
+          <div>
+            <p class="eyebrow">OPTIONS</p>
+            <h1 id="settings-title">设置</h1>
+          </div>
+          <label class="language-switch">
+            <span id="language-label">语言</span>
+            <select id="language-select">
+              <option value="zh-CN">中文</option>
+              <option value="en">English</option>
+            </select>
+          </label>
+        </div>
+        <p id="settings-subtitle" class="subtitle">配置整页截图时对固定栏和悬浮元素的处理方式。</p>
+      </header>
+
+      <section class="panel">
+        <h2 id="options-heading">截图偏好</h2>
+        <p id="options-description" class="panel-description">这些设置会影响后续截图任务。</p>
+
+        <div class="setting-group">
+          <p id="result-mode-label" class="setting-label">截图完成后的结果处理方式</p>
+
+          <label class="option-card">
+            <input type="radio" name="result-mode" value="preview-tab" />
+            <span class="option-copy">
+              <strong id="result-preview-title">打开预览页</strong>
+              <span id="result-preview-description">截图完成后自动打开预览页，可手动选择 PNG、JPEG、PDF 并复制到剪贴板。</span>
+            </span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="result-mode" value="auto-download" />
+            <span class="option-copy">
+              <strong id="result-auto-title">自动下载，不切到新网页</strong>
+              <span id="result-auto-description">在后台生成文件并自动下载，尽量不打断当前浏览。</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="setting-group compact">
+          <p id="auto-export-format-label" class="setting-label">自动下载默认格式</p>
+          <label class="select-row">
+            <select id="auto-export-format-select">
+              <option value="png">PNG</option>
+              <option value="jpeg">JPEG</option>
+              <option value="pdf">PDF</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="setting-group compact">
+          <p id="download-path-label" class="setting-label">下载子目录</p>
+          <label class="select-row">
+            <input id="download-path-input" type="text" placeholder="例如: Screenshots/Chrome" />
+          </label>
+          <p id="download-path-description" class="panel-description">留空则使用浏览器默认下载目录。这里只能设置默认下载目录下的相对子目录，不能指定任意绝对路径。</p>
+        </div>
+
+        <div class="setting-group compact">
+          <label class="checkbox-row">
+            <input id="show-popup-preview-input" type="checkbox" />
+            <span id="show-popup-preview-label">在插件说明框中显示最近下载预览</span>
+          </label>
+          <p id="show-popup-preview-description" class="panel-description">关闭后，popup 状态框不再展示最近一次下载的缩略预览图。</p>
+        </div>
+
+        <div class="setting-group compact">
+          <p id="popup-card-scale-label" class="setting-label">说明框大小比例</p>
+          <label class="select-row">
+            <select id="popup-card-scale-select">
+              <option value="compact">紧凑</option>
+              <option value="standard">标准</option>
+              <option value="large">加大</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="setting-group compact">
+          <p id="popup-card-background-label" class="setting-label">说明框背景样式</p>
+          <label class="select-row">
+            <select id="popup-card-background-select">
+              <option value="default">默认</option>
+              <option value="translucent">半透明</option>
+              <option value="transparent">透明</option>
+              <option value="dark">黑色</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="setting-group">
+          <p id="floating-mode-label" class="setting-label">整页截图固定栏处理</p>
+
+          <label class="option-card">
+            <input type="radio" name="floating-mode" value="smart-hide" />
+            <span class="option-copy">
+              <strong id="floating-smart-hide-title">第一页保留，后续隐藏</strong>
+              <span id="floating-smart-hide-description">保留顶部真实导航栏，同时避免后续截图里重复出现悬浮元素。</span>
+            </span>
+          </label>
+
+          <label class="option-card">
+            <input type="radio" name="floating-mode" value="keep" />
+            <span class="option-copy">
+              <strong id="floating-keep-title">始终保留固定栏</strong>
+              <span id="floating-keep-description">整页截图完整保留固定栏与悬浮菜单，适合需要完整还原页面外观时使用。</span>
+            </span>
+          </label>
+        </div>
+
+        <div class="actions">
+          <button id="reset-button" class="secondary-button" type="button">恢复默认</button>
+          <span id="save-state" class="save-state"></span>
+        </div>
+      </section>
+
+      <p id="settings-footnote" class="footnote">可在弹窗中直接打开设置页。</p>
+    </main>
+
+    <script src="i18n.js"></script>
+    <script src="settings.js"></script>
+    <script src="options.js"></script>
+  </body>
+</html>
