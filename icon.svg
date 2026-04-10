@@ -1,0 +1,25 @@
+<svg width="128" height="128" viewBox="0 0 128 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M38 24H82L92 37H98C107.941 37 116 45.0589 116 55V84C116 93.9411 107.941 102 98 102H30C20.0589 102 12 93.9411 12 84V55C12 45.0589 20.0589 37 30 37H30.5L38 24Z" fill="url(#bodyGradient)"/>
+  <path d="M38 24H82L92 37H98C107.941 37 116 45.0589 116 55V84C116 93.9411 107.941 102 98 102H30C20.0589 102 12 93.9411 12 84V55C12 45.0589 20.0589 37 30 37H30.5L38 24Z" fill="url(#shine)" fill-opacity="0.65"/>
+  <path d="M38 24H82L92 37H98C107.941 37 116 45.0589 116 55V84C116 93.9411 107.941 102 98 102H30C20.0589 102 12 93.9411 12 84V55C12 45.0589 20.0589 37 30 37H30.5L38 24Z" stroke="#0D6B4D" stroke-width="4"/>
+  <circle cx="64" cy="68" r="25" fill="#D5F5E7"/>
+  <circle cx="64" cy="68" r="19" fill="url(#lensGradient)"/>
+  <circle cx="64" cy="68" r="10" fill="#2FA677"/>
+  <circle cx="56" cy="60" r="4.5" fill="#F7FFFB" fill-opacity="0.85"/>
+  <rect x="87" y="47" width="12" height="9" rx="4.5" fill="#E8FBF2"/>
+  <path d="M40 35H80L87 43H33L40 35Z" fill="#A7E7CB" fill-opacity="0.55"/>
+  <defs>
+    <linearGradient id="bodyGradient" x1="64" y1="28" x2="64" y2="98" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2FB57D"/>
+      <stop offset="1" stop-color="#138A63"/>
+    </linearGradient>
+    <linearGradient id="lensGradient" x1="50" y1="52" x2="79" y2="82" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#EEFDF7"/>
+      <stop offset="1" stop-color="#9CE1C1"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="38" y1="34" x2="78" y2="78" gradientUnits="userSpaceOnUse">
+      <stop stop-color="white"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+</svg>
