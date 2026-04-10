@@ -35,11 +35,12 @@ Example images under `docs/screenshots/`:
 
 ## Usage
 
-1. Open a normal web page
-2. Click the extension icon
-3. Choose **Capture Region**, **Capture Visible Area**, or **Capture Full Page**
-4. Wait for the preview page to open, or let the extension auto-download if that mode is enabled
-5. Export the result as `PNG`, `JPEG`, or `PDF`, or copy it as an image
+1. Download the project​ and extract the folder
+2. Open a normal web page
+3. Click the extension icon
+4. Choose **Capture Region**, **Capture Visible Area**, or **Capture Full Page**
+5. Wait for the preview page to open, or let the extension auto-download if that mode is enabled
+6. Export the result as `PNG`, `JPEG`, or `PDF`, or copy it as an image
 
 ## Settings
 
