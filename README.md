@@ -18,7 +18,7 @@ It supports region capture, visible-area capture, and full-page capture, with a 
 
 ## Screenshots
 
-Add your example images under `docs/screenshots/`, then keep or rename these entries:
+Example images under `docs/screenshots/`:
 
 ![Popup](docs/screenshots/popup.png)
 ![Capture preview](docs/screenshots/preview.png)
